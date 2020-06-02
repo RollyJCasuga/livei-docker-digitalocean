@@ -1,0 +1,39 @@
+nginx:
+    image: 'nginx'
+    container_name: liveinginx
+    restart: always
+    ports:
+        - '80:80'
+    volumes:
+        - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        - ./public:/usr/share/nginx/html
+        - ./logs/access.log:/var/log/nginx/access.log
+        - ./logs/error.log:/var/log/nginx/error.log
+    links:
+        - php
+php:
+    image: 'php-fpm'
+    container_name: liveiphp
+    restart: always
+    volumes:
+        - ./public:/usr/share/nginx/html
+mysql:
+    image: 'mariadb'
+    container_name: liveimysql
+    restart: always
+    ports:
+        - '3306:3306'
+    volumes:
+        - ./database:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: admin
+phpmyadmin:
+    image: 'phpmyadmin/phpmyadmin'
+    container_name: liveiphpmyadmin
+    restart: always
+    links:
+        - mysql:mysql
+    ports:
+        - 81:80
+    environment:
+        PMA_HOSTS: mysql

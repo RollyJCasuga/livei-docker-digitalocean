@@ -1,0 +1,220 @@
+Jun 02 06:43:27 [Warning] [default] [default] ezcImageMimeTypeUnsupportedException Object
+(
+    [originalMessage] => Converter does not support MIME type 'image/jpeg' for 'output'.
+    [message:protected] => Converter does not support MIME type 'image/jpeg' for 'output'.
+    [string:Exception:private] => ezcImageMimeTypeUnsupportedException: Converter does not support MIME type 'image/jpeg' for 'output'. in /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php:380
+Stack trace:
+#0 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php(127): ezcImageTransformation->setMimeOut()
+#1 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php(277): ezcImageTransformation->__construct()
+#2 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(44): ezcImageConverter->createTransformation()
+#3 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(60): erLhcoreClassImageConverter->__construct()
+#4 /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php(394): erLhcoreClassImageConverter::getInstance()
+#5 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php(2): erLhcoreClassUserValidator::validateUserPhoto()
+#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
+#7 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
+#8 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
+#9 {main}
+    [code:protected] => 0
+    [file:protected] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
+    [line:protected] => 380
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
+                    [line] => 127
+                    [function] => setMimeOut
+                    [class] => ezcImageTransformation
+                    [type] => ->
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php
+                    [line] => 277
+                    [function] => __construct
+                    [class] => ezcImageTransformation
+                    [type] => ->
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
+                    [line] => 44
+                    [function] => createTransformation
+                    [class] => ezcImageConverter
+                    [type] => ->
+                )
+
+            [3] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
+                    [line] => 60
+                    [function] => __construct
+                    [class] => erLhcoreClassImageConverter
+                    [type] => ->
+                )
+
+            [4] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php
+                    [line] => 394
+                    [function] => getInstance
+                    [class] => erLhcoreClassImageConverter
+                    [type] => ::
+                )
+
+            [5] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php
+                    [line] => 2
+                    [function] => validateUserPhoto
+                    [class] => erLhcoreClassUserValidator
+                    [type] => ::
+                )
+
+            [6] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 96
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php
+                        )
+
+                    [function] => include
+                )
+
+            [7] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 547
+                    [function] => runModule
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+            [8] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/index.php
+                    [line] => 44
+                    [function] => moduleInit
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Jun 02 06:44:44 [Warning] [default] [default] ezcImageMimeTypeUnsupportedException Object
+(
+    [originalMessage] => Converter does not support MIME type 'image/jpeg' for 'output'.
+    [message:protected] => Converter does not support MIME type 'image/jpeg' for 'output'.
+    [string:Exception:private] => ezcImageMimeTypeUnsupportedException: Converter does not support MIME type 'image/jpeg' for 'output'. in /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php:380
+Stack trace:
+#0 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php(127): ezcImageTransformation->setMimeOut()
+#1 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php(277): ezcImageTransformation->__construct()
+#2 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(44): ezcImageConverter->createTransformation()
+#3 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(60): erLhcoreClassImageConverter->__construct()
+#4 /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php(394): erLhcoreClassImageConverter::getInstance()
+#5 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php(2): erLhcoreClassUserValidator::validateUserPhoto()
+#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
+#7 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
+#8 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
+#9 {main}
+    [code:protected] => 0
+    [file:protected] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
+    [line:protected] => 380
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
+                    [line] => 127
+                    [function] => setMimeOut
+                    [class] => ezcImageTransformation
+                    [type] => ->
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php
+                    [line] => 277
+                    [function] => __construct
+                    [class] => ezcImageTransformation
+                    [type] => ->
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
+                    [line] => 44
+                    [function] => createTransformation
+                    [class] => ezcImageConverter
+                    [type] => ->
+                )
+
+            [3] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
+                    [line] => 60
+                    [function] => __construct
+                    [class] => erLhcoreClassImageConverter
+                    [type] => ->
+                )
+
+            [4] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php
+                    [line] => 394
+                    [function] => getInstance
+                    [class] => erLhcoreClassImageConverter
+                    [type] => ::
+                )
+
+            [5] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php
+                    [line] => 2
+                    [function] => validateUserPhoto
+                    [class] => erLhcoreClassUserValidator
+                    [type] => ::
+                )
+
+            [6] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 96
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php
+                        )
+
+                    [function] => include
+                )
+
+            [7] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 547
+                    [function] => runModule
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+            [8] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/index.php
+                    [line] => 44
+                    [function] => moduleInit
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
