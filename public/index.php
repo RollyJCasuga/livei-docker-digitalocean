@@ -645,7 +645,7 @@
                         <a id="cameras" class="cameras" onclick="displayPaywall()">Cameras</a>
                         <a id="contact" class="contact" onclick="showContent(this.id)">Contact</a>
                         <a id="downloads" class="downloads" onclick="displayPaywall()">Downloads</a>
-                        <a id="services" class="services" onclick="displayPaywall()">Services</a>
+                        <a id="services" class="services" onclick="displayServices()">Services</a>
                         <a id="login" class="login" onclick="displayLogin()">
                         	<?php 
                         		if ($loginStatus) {
@@ -677,7 +677,8 @@
                         <a href="Raspbian+Full+with+LEMP.zip">Raspbian Full with LEMP (3.21GB)</a>
                 </div>
                 <div id="services-content" class="services-content">
-                        <a>RasPi 4 HTTP server setup $10/hr</a>
+                        <!-- <a href="bdd33ab49ef4aefdc55cfbee2898b672.php">Putty Training for 2 Hours ( $10/hr )</a> -->
+                        <a href="589065d67d5a557898f4183950ec58cf.php">TeamViewer</a>
                 </div>
 
                 <div id="livePointer" class="livePointer"></div>
@@ -868,6 +869,40 @@
  
 								<!-- END FOF DASHBOARD CONTAINER -->
 
+
+                                <!-- FOR SERVICES CONTAINER -->
+            <style>
+                .servicesContainer {
+                  display: none;
+                  position: fixed;
+                  width: var(--login-width);
+                  height: var(--login-height);
+                  top: 60px;
+                  left: calc(100vw / 2 - calc(var(--login-width) / 2));
+                  background-color: rgba(0, 0, 0, 0.3);
+                  text-align: center;
+                  color: white;
+                  font-family: "Arial Narrow", Arial, sans-serif;
+                  font-size: 15px;
+                  font-weight: normal;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  overflow: auto;
+                }
+            </style>
+            <div id="servicesContainer" class="servicesContainer">
+                <?php include 'servicesmenu.php';?>
+            </div>
+            <script>
+                function displayServices() {
+                    document.getElementById("servicesContainer").style.display = "block";
+                }
+                function hideServices() {
+                    document.getElementById("servicesContainer").style.display = "none";
+                }
+            </script>
+                                <!-- END FOR SERVICES CONTAINER -->
+
                                 <!-- START FOR PAYWALL -->
             
             <style type="text/css">
@@ -900,7 +935,6 @@
                 }
             </script>
                                 <!-- END FOR PAYWALL -->
-								
         </body>
 </html>
 
@@ -1374,13 +1408,13 @@
 
         window.onclick = function(event) {
         // if(!event.target.matches('.dropdown') && !event.target.matches('.cameras') && !event.target.matches('.contact') && !event.target.matches('.downloads') && !event.target.matches('.services') && !event.target.matches('#home') && !event.target.matches('#location1') && !event.target.matches('#location2')) {
-        if(!event.target.matches('.dropdown')&& !event.target.matches('.contact') && !event.target.matches('#home') && !event.target.matches('#location1') && !event.target.matches('#location2')) {
+        if(!event.target.matches('.dropdown') && !event.target.matches('.contact') && !event.target.matches('#home') && !event.target.matches('#location1') && !event.target.matches('#location2')) {
 			hideContent("dropdown");
 	                hideContent("cameras");
 	                hideContent("contact");
 	                hideContent("downloads");
 	                hideContent("services");
-			if(loginStatus) hideContent("accounts");
+                    if(loginStatus) hideContent("accounts");
 	                hidePointer();
 	                dropdown = accounts = cameras = downloads = services = contact = false;
 		}

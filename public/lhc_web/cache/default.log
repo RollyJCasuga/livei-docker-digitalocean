@@ -1,91 +1,83 @@
-Jun 02 06:43:27 [Warning] [default] [default] ezcImageMimeTypeUnsupportedException Object
+Jun 05 00:24:01 [Warning] [default] [default] PDOException Object
 (
-    [originalMessage] => Converter does not support MIME type 'image/jpeg' for 'output'.
-    [message:protected] => Converter does not support MIME type 'image/jpeg' for 'output'.
-    [string:Exception:private] => ezcImageMimeTypeUnsupportedException: Converter does not support MIME type 'image/jpeg' for 'output'. in /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php:380
+    [message:protected] => SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+    [string:Exception:private] => PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php:837
 Stack trace:
-#0 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php(127): ezcImageTransformation->setMimeOut()
-#1 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php(277): ezcImageTransformation->__construct()
-#2 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(44): ezcImageConverter->createTransformation()
-#3 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(60): erLhcoreClassImageConverter->__construct()
-#4 /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php(394): erLhcoreClassImageConverter::getInstance()
-#5 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php(2): erLhcoreClassUserValidator::validateUserPhoto()
-#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
-#7 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
-#8 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
-#9 {main}
-    [code:protected] => 0
-    [file:protected] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
-    [line:protected] => 380
+#0 /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php(837): PDOStatement->execute()
+#1 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php(1): erLhcoreClassChat::isOnline()
+#2 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(558): include('/usr/share/ngin...')
+#3 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(531): erLhcoreClassTemplate->fetchExecute()
+#4 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php(2): erLhcoreClassTemplate->fetch()
+#5 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
+#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
+#7 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
+#8 {main}
+    [code:protected] => HY000
+    [file:protected] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+    [line:protected] => 837
     [trace:Exception:private] => Array
         (
             [0] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
-                    [line] => 127
-                    [function] => setMimeOut
-                    [class] => ezcImageTransformation
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+                    [line] => 837
+                    [function] => execute
+                    [class] => PDOStatement
                     [type] => ->
                 )
 
             [1] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php
-                    [line] => 277
-                    [function] => __construct
-                    [class] => ezcImageTransformation
-                    [type] => ->
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
+                    [line] => 1
+                    [function] => isOnline
+                    [class] => erLhcoreClassChat
+                    [type] => ::
                 )
 
             [2] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
-                    [line] => 44
-                    [function] => createTransformation
-                    [class] => ezcImageConverter
-                    [type] => ->
-                )
-
-            [3] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
-                    [line] => 60
-                    [function] => __construct
-                    [class] => erLhcoreClassImageConverter
-                    [type] => ->
-                )
-
-            [4] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php
-                    [line] => 394
-                    [function] => getInstance
-                    [class] => erLhcoreClassImageConverter
-                    [type] => ::
-                )
-
-            [5] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php
-                    [line] => 2
-                    [function] => validateUserPhoto
-                    [class] => erLhcoreClassUserValidator
-                    [type] => ::
-                )
-
-            [6] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
-                    [line] => 96
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 558
                     [args] => Array
                         (
-                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/e34c69c7f5b3a162979547674915bef3.php
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
                         )
 
                     [function] => include
                 )
 
-            [7] => Array
+            [3] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 531
+                    [function] => fetchExecute
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [4] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                    [line] => 2
+                    [function] => fetch
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [5] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 96
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                        )
+
+                    [function] => include
+                )
+
+            [6] => Array
                 (
                     [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
                     [line] => 547
@@ -94,7 +86,7 @@ Stack trace:
                     [type] => ::
                 )
 
-            [8] => Array
+            [7] => Array
                 (
                     [file] => /usr/share/nginx/html/lhc_web/index.php
                     [line] => 44
@@ -106,96 +98,95 @@ Stack trace:
         )
 
     [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 2006
+            [2] => MySQL server has gone away
+        )
+
 )
 
-Jun 02 06:44:44 [Warning] [default] [default] ezcImageMimeTypeUnsupportedException Object
+Jun 05 00:28:31 [Warning] [default] [default] PDOException Object
 (
-    [originalMessage] => Converter does not support MIME type 'image/jpeg' for 'output'.
-    [message:protected] => Converter does not support MIME type 'image/jpeg' for 'output'.
-    [string:Exception:private] => ezcImageMimeTypeUnsupportedException: Converter does not support MIME type 'image/jpeg' for 'output'. in /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php:380
+    [message:protected] => SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+    [string:Exception:private] => PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php:837
 Stack trace:
-#0 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php(127): ezcImageTransformation->setMimeOut()
-#1 /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php(277): ezcImageTransformation->__construct()
-#2 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(44): ezcImageConverter->createTransformation()
-#3 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php(60): erLhcoreClassImageConverter->__construct()
-#4 /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php(394): erLhcoreClassImageConverter::getInstance()
-#5 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php(2): erLhcoreClassUserValidator::validateUserPhoto()
-#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
-#7 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
-#8 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
-#9 {main}
-    [code:protected] => 0
-    [file:protected] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
-    [line:protected] => 380
+#0 /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php(837): PDOStatement->execute()
+#1 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php(1): erLhcoreClassChat::isOnline()
+#2 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(558): include('/usr/share/ngin...')
+#3 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(531): erLhcoreClassTemplate->fetchExecute()
+#4 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php(2): erLhcoreClassTemplate->fetch()
+#5 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
+#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
+#7 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
+#8 {main}
+    [code:protected] => HY000
+    [file:protected] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+    [line:protected] => 837
     [trace:Exception:private] => Array
         (
             [0] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/transformation.php
-                    [line] => 127
-                    [function] => setMimeOut
-                    [class] => ezcImageTransformation
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+                    [line] => 837
+                    [function] => execute
+                    [class] => PDOStatement
                     [type] => ->
                 )
 
             [1] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/ezcomponents/ImageConversion/src/converter.php
-                    [line] => 277
-                    [function] => __construct
-                    [class] => ezcImageTransformation
-                    [type] => ->
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
+                    [line] => 1
+                    [function] => isOnline
+                    [class] => erLhcoreClassChat
+                    [type] => ::
                 )
 
             [2] => Array
                 (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
-                    [line] => 44
-                    [function] => createTransformation
-                    [class] => ezcImageConverter
-                    [type] => ->
-                )
-
-            [3] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhimageconverter.php
-                    [line] => 60
-                    [function] => __construct
-                    [class] => erLhcoreClassImageConverter
-                    [type] => ->
-                )
-
-            [4] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhuser/lhuservalidator.php
-                    [line] => 394
-                    [function] => getInstance
-                    [class] => erLhcoreClassImageConverter
-                    [type] => ::
-                )
-
-            [5] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php
-                    [line] => 2
-                    [function] => validateUserPhoto
-                    [class] => erLhcoreClassUserValidator
-                    [type] => ::
-                )
-
-            [6] => Array
-                (
-                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
-                    [line] => 96
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 558
                     [args] => Array
                         (
-                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/ecd2d39f20c24d1ae5400e337bd75f47.php
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
                         )
 
                     [function] => include
                 )
 
-            [7] => Array
+            [3] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 531
+                    [function] => fetchExecute
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [4] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                    [line] => 2
+                    [function] => fetch
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [5] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 96
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                        )
+
+                    [function] => include
+                )
+
+            [6] => Array
                 (
                     [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
                     [line] => 547
@@ -204,7 +195,7 @@ Stack trace:
                     [type] => ::
                 )
 
-            [8] => Array
+            [7] => Array
                 (
                     [file] => /usr/share/nginx/html/lhc_web/index.php
                     [line] => 44
@@ -216,5 +207,121 @@ Stack trace:
         )
 
     [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 2006
+            [2] => MySQL server has gone away
+        )
+
+)
+
+Jun 05 00:28:33 [Warning] [default] [default] PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+    [string:Exception:private] => PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php:837
+Stack trace:
+#0 /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php(837): PDOStatement->execute()
+#1 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php(1): erLhcoreClassChat::isOnline()
+#2 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(558): include('/usr/share/ngin...')
+#3 /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php(531): erLhcoreClassTemplate->fetchExecute()
+#4 /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php(2): erLhcoreClassTemplate->fetch()
+#5 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(96): include('/usr/share/ngin...')
+#6 /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php(547): erLhcoreClassModule::runModule()
+#7 /usr/share/nginx/html/lhc_web/index.php(44): erLhcoreClassModule::moduleInit()
+#8 {main}
+    [code:protected] => HY000
+    [file:protected] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+    [line:protected] => 837
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhchat/lhchat.php
+                    [line] => 837
+                    [function] => execute
+                    [class] => PDOStatement
+                    [type] => ->
+                )
+
+            [1] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
+                    [line] => 1
+                    [function] => isOnline
+                    [class] => erLhcoreClassChat
+                    [type] => ::
+                )
+
+            [2] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 558
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/34023aa7045132913b1dd04100eec8be.php
+                        )
+
+                    [function] => include
+                )
+
+            [3] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhtpl/tpl.php
+                    [line] => 531
+                    [function] => fetchExecute
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [4] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                    [line] => 2
+                    [function] => fetch
+                    [class] => erLhcoreClassTemplate
+                    [type] => ->
+                )
+
+            [5] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 96
+                    [args] => Array
+                        (
+                            [0] => /usr/share/nginx/html/lhc_web/cache/compiledtemplates/637f2865c60a02ad97f85055e1b7ca2e.php
+                        )
+
+                    [function] => include
+                )
+
+            [6] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/lib/core/lhcore/lhmodule.php
+                    [line] => 547
+                    [function] => runModule
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+            [7] => Array
+                (
+                    [file] => /usr/share/nginx/html/lhc_web/index.php
+                    [line] => 44
+                    [function] => moduleInit
+                    [class] => erLhcoreClassModule
+                    [type] => ::
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 2006
+            [2] => MySQL server has gone away
+        )
+
 )
 
